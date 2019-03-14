@@ -3,6 +3,8 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\BelongsTo;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -42,8 +44,9 @@ class Lesson extends Resource
     {
         return [
             ID::make()->sortable(),
-            BelongsTo::make('Image'),
-            BelongsTo::make('TextBox')
+            Text::make('Image'),
+            BelongsTo::make('Dialogue'),
+            Trix::make('TextBox')
 
         ];
     }

@@ -15,6 +15,8 @@ class CreateDialogueLinesTable extends Migration
     {
         Schema::create('dialogue_lines', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('dialogue_id');
+            $table->string('text');
             $table->timestamps();
         });
     }

@@ -3,19 +3,19 @@
 namespace App\Nova;
 
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\HasMany;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Fields\Trix;
 
-
-class TextBox extends Resource
+class Dialogue extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\TextBox';
+    public static $model = 'App\Dialogue';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -43,7 +43,7 @@ class TextBox extends Resource
     {
         return [
             ID::make()->sortable(),
-            Trix::make('text')->sortable()
+            HasMany::make('DialogueLine')
         ];
     }
 

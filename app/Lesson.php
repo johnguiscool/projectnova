@@ -6,18 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lesson extends Model
 {
-    public function image()
-    {
-        return $this->belongsTo('App\Image');
-    }
+    protected $image, $textbox;
 
-    /*public function dialogue()
+    public function dialogue()
     {
-        return $this->hasOne('App\Dialogue')
-    }*/
-
-    public function textbox()
-    {
-        return $this->belongsTo('App\TextBox');
+        return $this->belongsTo('App\Dialogue');
     }
 }

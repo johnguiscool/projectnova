@@ -15,9 +15,9 @@ class CreateLessonsTable extends Migration
     {
         Schema::create('lessons', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('image_id');
+            $table->string('image');
             $table->integer('dialogue_id');
-            $table->integer('textbox_id');
+            $table->text('textbox');
             $table->timestamps();
         });
     }

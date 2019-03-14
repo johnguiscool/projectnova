@@ -7,14 +7,14 @@ use Laravel\Nova\Fields\Text;
 use Illuminate\Http\Request;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Image extends Resource
+class DialogueLine extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Image';
+    public static $model = 'App\Dialogue\DialogueLine';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -42,7 +42,8 @@ class Image extends Resource
     {
         return [
             ID::make()->sortable(),
-            TEXT::make('url')->sortable()
+            Text::make('dialogue_id'),
+            Text::make('text')
         ];
     }
 
