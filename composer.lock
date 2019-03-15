@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "785cc92611d8ed9f6c978bc76d6bf65e",
+    "content-hash": "18ac7a9ec3d357d75bac22a60156971c",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -693,6 +693,39 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "johnguiscool/dialoguebuilder",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Dialoguebuilder",
+                "reference": "1b4a169d0a6942b1df7f33b3d9a59d7c7251e526"
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Johnguiscool\\Dialoguebuilder\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Johnguiscool\\Dialoguebuilder\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ]
         },
         {
             "name": "laravel/framework",

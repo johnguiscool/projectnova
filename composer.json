@@ -12,7 +12,8 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
-        "laravel/nova": "~1.0"
+        "laravel/nova": "~1.0",
+        "johnguiscool/dialoguebuilder": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
@@ -60,11 +61,14 @@
             "@php artisan key:generate --ansi"
         ]
     },
-
     "repositories": [
-    {
-        "type": "composer",
-        "url": "https://nova.laravel.com"
-    }
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Dialoguebuilder"
+        }
     ]
 }
